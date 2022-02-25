@@ -9,15 +9,23 @@
 </head>
 <body>
 
-    <h1>TODO - complete this page</h1>
+<h1>Info about {{ username }}</h1>
 
-    <form method="GET" action="get_user">
+<!-- {{ user_info }} -->
+<br>
+User's name: {{ user_info.name }} <br>
+GitHub url: {{ user_info.html_url }}
 
-        <label>Enter Github for username</label>
-        <input name="username">
-        <button type="submit">Go!</button>
+<a href=" {{ user_info.html_url }}">
+    Visit their page at GitHub
+</a>
 
-    </form>
-    
+<br>
+
+Public Repository: {{ user_info.public_repos }}
+<br>
+<img src="{{ user_info.avatar_url}}">
+
+
 </body>
 </html>
